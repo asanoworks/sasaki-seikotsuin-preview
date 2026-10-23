@@ -1,0 +1,259 @@
+.welcome .container {
+  position:relative
+}
+.welcome-copy {
+  text-align:center;
+  max-width:1000px;
+  margin:auto;
+  font-size:18px;
+  line-height:2
+}
+.welcome-copy p {
+  margin-bottom:12px
+}
+.welcome-copy .heading-rule {
+  width:40px;
+  margin:36px auto 24px
+}
+.welcome-copy .lead {
+  font-size:22px;
+  font-weight:500
+}
+.welcome-image {
+  position:absolute;
+  left:-80px;
+  bottom:-100px;
+  width:229px;
+  height:172px
+}
+.welcome {
+  padding-bottom:160px
+}
+.questionnaire-callout {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:48px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:32px 40px;
+  margin:0 0 56px
+}
+.questionnaire-callout h3 {
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:.1em;
+  margin-bottom:12px
+}
+.questionnaire-callout p {
+  max-width:680px
+}
+.questionnaire-callout .unavailable-wrap {
+  flex-shrink:0
+}
+.questionnaire-card {
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:48px;
+  padding:40px
+}
+.questionnaire-badge {
+  background:#dcefd7;
+  border-radius:99px;
+  padding:4px 16px;
+  display:inline-block;
+  font-size:13px;
+  letter-spacing:.15em
+}
+.questionnaire-notes {
+  margin-top:24px;
+  font-size:14px;
+  display:grid;
+  gap:12px
+}
+.qr-panel {
+  align-self:center;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:var(--beige);
+  padding:24px;
+  text-align:center
+}
+.qr-panel>p:first-child {
+  letter-spacing:.25em;
+  font-size:13px
+}
+.qr-panel>p:last-child {
+  font-size:12px;
+  margin-top:16px
+}
+.qr-code {
+  width:196px;
+  height:196px;
+  background:white
+}
+.qr-unset {
+  width:196px;
+  max-width:100%;
+  aspect-ratio:1;
+  background:var(--paper);
+  border:1px dashed var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  color:#776946
+}
+.qr-unset small {
+  font-size:11px
+}
+.before-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:40px 32px
+}
+.before-grid article {
+  border-top:1px solid var(--line);
+  padding-top:24px
+}
+.before-grid h3 {
+  font-size:20px;
+  font-weight:500;
+  margin-bottom:16px
+}
+.before-grid p {
+  white-space:pre-line
+}
+.before-note {
+  font-size:14px;
+  margin-top:40px
+}
+.page-first .page-hero {
+  padding-bottom:112px;
+  min-height:350px
+}
+.before-grid .round-icon {
+  margin-bottom:20px;
+  background:#f3ead9;
+  color:var(--gold);
+  width:48px;
+  height:48px
+}
+.before-grid .round-icon .icon {
+  width:24px;
+  height:24px
+}
+@media(max-width:1000px) and (min-width:768px) {
+  .questionnaire-callout {
+    gap:24px;
+    padding:28px
+  }
+  .questionnaire-callout .button {
+    width:240px
+  }
+  .questionnaire-card {
+    grid-template-columns:1fr 230px;
+    gap:28px;
+    padding:32px
+  }
+  .welcome-image {
+    left:-30px;
+    width:150px
+  }
+  .before-grid {
+    gap:28px
+  }
+}
+@media(max-width:767px) {
+  .page-first .page-hero {
+    padding-bottom:64px;
+    min-height:265px
+  }
+  .welcome {
+    padding:64px 0
+  }
+  .welcome-copy {
+    font-size:15px;
+    line-height:1.9
+  }
+  .welcome-copy p {
+    margin-bottom:20px
+  }
+  .welcome-copy p:first-child {
+    max-width:290px;
+    margin-inline:auto
+  }
+  .welcome-copy .lead {
+    font-size:18px
+  }
+  .welcome-copy .heading-rule {
+    margin:36px auto 28px
+  }
+  .welcome-image {
+    display:none
+  }
+  .welcome .section-heading h2 {
+    font-size:24px
+  }
+  .questionnaire-callout {
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+    padding:24px;
+    margin-bottom:40px
+  }
+  .questionnaire-callout h3 {
+    font-size:17px
+  }
+  .questionnaire-callout .button {
+    width:100%
+  }
+  .first-flow .flow-grid {
+    gap:48px
+  }
+  .first-flow .flow-image {
+    margin-block:44px;
+    height:200px;
+    width:280px
+  }
+  .questionnaire-card {
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:24px
+  }
+  .questionnaire h2 {
+    font-size:24px
+  }
+  .questionnaire .eyebrow {
+    font-size:10px;
+    letter-spacing:.22em
+  }
+  .questionnaire-card .copy p {
+    font-size:14px
+  }
+  .qr-panel {
+    width:235px;
+    margin:auto;
+    padding:20px
+  }
+  .qr-panel>p:first-child {
+    font-size:13px
+  }
+  .questionnaire-notes {
+    font-size:12px
+  }
+  .before-grid {
+    grid-template-columns:1fr;
+    gap:32px
+  }
+  .before-grid h3 {
+    font-size:18px
+  }
+  .before-note {
+    font-size:13px
+  }
+}

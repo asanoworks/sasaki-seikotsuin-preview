@@ -1,0 +1,402 @@
+.treatment-hero {
+  padding-bottom:112px;
+  min-height:580px
+}
+.treatment-hero .page-hero__lead {
+  font-size:28px;
+  margin:28px auto 20px
+}
+.treatment-hero .page-hero__image {
+  width:230px;
+  height:230px;
+  left:calc(100% + 150px);
+  top:40px
+}
+.treatment-description {
+  font-size:20px;
+  margin:24px auto 44px
+}
+.treatment-tabs {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-bottom:28px;
+  flex-wrap:wrap
+}
+.treatment-tabs a {
+  border:1px solid var(--line);
+  border-radius:99px;
+  padding:10px 16px;
+  font-size:14px
+}
+.treatment-tabs a:hover {
+  background:var(--beige)
+}
+.treatment-price-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px
+}
+.price-group {
+  min-height:270px
+}
+.price-group:last-child {
+  grid-column:1/3;
+  width:calc(50% - 12px);
+  justify-self:center
+}
+.price-group:nth-child(4) {
+  border-color:#ceb470;
+  background:#faf5e8
+}
+.price-group__title {
+  display:flex;
+  gap:16px;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  padding-bottom:28px;
+  margin-bottom:16px
+}
+.price-group__title .round-icon {
+  width:76px;
+  height:76px;
+  background:#f3ead9
+}
+.price-group__title .icon {
+  width:36px;
+  height:36px
+}
+.price-group__title h3 {
+  font-size:24px;
+  font-family:'Noto Sans JP',sans-serif;
+  font-weight:500
+}
+.price-group__title p {
+  font-size:13px;
+  margin:0
+}
+.price-group dl {
+  margin:0;
+  display:grid;
+  gap:8px
+}
+.price-group dl>div {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center
+}
+.price-group dd {
+  font-size:28px;
+  font-weight:500;
+  margin:0
+}
+.treatment-price-notes {
+  margin-top:48px;
+  max-width:1000px;
+  margin-inline:auto
+}
+.treatment-detail .two-columns {
+  gap:64px;
+  grid-template-columns:1fr 1fr;
+  align-items:start
+}
+.treatment-detail .feature-image {
+  aspect-ratio:532/400;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.treatment-detail .feature-image>img,.treatment-detail .feature-image picture,.treatment-detail .feature-image picture img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  max-height:none
+}
+.detail-reverse .feature-image {
+  grid-column:2;
+  grid-row:1
+}
+.detail-reverse .copy {
+  grid-column:1;
+  grid-row:1
+}
+.detail-number {
+  justify-content:flex-start;
+  margin-bottom:20px;
+  letter-spacing:.3em
+}
+.detail-number span {
+  font-family:'Zen Maru Gothic',sans-serif;
+  font-size:32px;
+  letter-spacing:0;
+  line-height:1
+}
+.detail-lead {
+  color:var(--gold);
+  font-size:18px;
+  line-height:1.8;
+  margin:24px 0
+}
+.treatment-detail .pill {
+  font-size:16px;
+  line-height:1.8
+}
+.detail-note {
+  margin-top:48px;
+  padding-left:16px
+}
+.treatment-concerns {
+  padding-top:0
+}
+.treatment-concerns .concern-list {
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px
+}
+.treatment-concerns .concern-item {
+  padding:16px;
+  font-size:14px;
+  font-weight:400;
+  gap:12px
+}
+.treatment-concerns .concern-item .round-icon {
+  width:40px;
+  height:40px
+}
+.treatment-concerns .concern-item .icon {
+  width:22px;
+  height:22px
+}
+.future-posture {
+  margin-top:32px;
+  border:1px solid #ead5a1;
+  border-radius:16px;
+  background:#f9f4e8;
+  padding:48px;
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:48px;
+  align-items:center
+}
+.future-posture h2 {
+  font-size:28px
+}
+.future-posture .section-heading {
+  margin-bottom:24px
+}
+.future-posture .heading-rule {
+  display:none
+}
+.future-posture ol {
+  display:grid;
+  gap:12px
+}
+.future-posture li {
+  display:flex;
+  gap:16px;
+  align-items:center;
+  background:var(--paper);
+  border-radius:16px;
+  padding:16px;
+  font-size:15px
+}
+.future-posture li span {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--gold);
+  color:#fff;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  flex-shrink:0;
+  font-size:14px
+}
+.page-treatment .faq-section {
+  padding-bottom:160px
+}
+.phone-outline {
+  color:var(--gold)
+}
+#posture .feature-image>img {
+  width:450px;
+  height:370.5px;
+  max-width:100%;
+  max-height:100%;
+}
+#hydrogen .feature-image picture {
+  width:494px;
+  height:354px;
+  max-width:100%;
+  max-height:100%;
+}
+#cupping .feature-image>img {
+  width:504px;
+  height:auto;
+  max-width:100%;
+  max-height:100%;
+}
+@media(max-width:1100px) and (min-width:768px) {
+  .treatment-hero .page-hero__image {
+    left:calc(100% + 30px);
+    width:180px
+  }
+  .treatment-detail .two-columns {
+    gap:32px
+  }
+  .price-group {
+    padding:24px
+  }
+  .price-group__title .round-icon {
+    width:52px;
+    height:52px
+  }
+  .price-group__title h3 {
+    font-size:21px
+  }
+  .treatment-concerns .concern-list {
+    grid-template-columns:1fr 1fr
+  }
+  .future-posture {
+    padding:32px;
+    gap:28px
+  }
+  .future-posture h2 {
+    font-size:24px
+  }
+}
+@media(max-width:767px) {
+  .treatment-hero {
+    padding-bottom:64px;
+    min-height:0
+  }
+  .treatment-hero .page-hero__lead {
+    font-size:20px;
+    margin-top:32px;
+    max-width:300px
+  }
+  .treatment-hero .page-hero__image {
+    width:59px;
+    height:59px;
+    left:calc(100% + 6px);
+    top:65px
+  }
+  .treatment-description {
+    font-size:15px;
+    margin:20px auto 28px
+  }
+  .treatment-tabs {
+    gap:8px;
+    margin-bottom:24px
+  }
+  .treatment-tabs a {
+    font-size:13px;
+    padding:8px 12px
+  }
+  .treatment-price-grid {
+    grid-template-columns:1fr;
+    gap:20px
+  }
+  .price-group {
+    min-height:0;
+    padding:24px
+  }
+  .price-group:last-child {
+    grid-column:auto;
+    width:100%
+  }
+  .price-group__title .round-icon {
+    width:56px;
+    height:56px
+  }
+  .price-group__title .icon {
+    width:28px;
+    height:28px
+  }
+  .price-group__title {
+    gap:12px;
+    padding-bottom:20px
+  }
+  .price-group__title h3 {
+    font-size:20px
+  }
+  .price-group__title p {
+    font-size:12px
+  }
+  .price-group dd {
+    font-size:26px
+  }
+  .treatment-price-notes {
+    margin-top:32px
+  }
+  .treatment-detail .two-columns {
+    grid-template-columns:1fr;
+    gap:32px
+  }
+  .detail-reverse .copy,.detail-reverse .feature-image {
+    grid-column:auto;
+    grid-row:auto
+  }
+  .treatment-detail .feature-image {
+    order:1;
+    aspect-ratio:335/260
+  }
+  .treatment-detail .copy {
+    order:2
+  }
+  .detail-number {
+    font-size:12px;
+    margin-bottom:20px
+  }
+  .detail-number span {
+    font-size:28px
+  }
+  .treatment-detail h2 {
+    font-size:24px
+  }
+  .detail-lead {
+    font-size:16px;
+    margin:20px 0
+  }
+  .treatment-detail .pill {
+    font-size:14px;
+    padding:12px 18px
+  }
+  .detail-note {
+    margin-top:24px;
+    padding-left:0
+  }
+  .treatment-concerns .concern-list {
+    grid-template-columns:1fr;
+    gap:12px
+  }
+  .treatment-concerns .concern-item {
+    flex-direction:row;
+    padding:20px;
+    font-size:14px;
+    text-align:left;
+    min-height:84px
+  }
+  .future-posture {
+    grid-template-columns:1fr;
+    padding:24px;
+    gap:24px;
+    margin-top:32px
+  }
+  .future-posture h2 {
+    font-size:24px
+  }
+  .future-posture .eyebrow {
+    font-size:11px;
+    letter-spacing:.2em
+  }
+  .future-posture li {
+    font-size:14px;
+    padding:12px
+  }
+  .page-treatment .faq-section {
+    padding-bottom:130px
+  }
+}
+
+@media(max-width:767px){#posture .feature-image>img{width:283.9px;height:233.75px}#hydrogen .feature-image picture{width:317px;height:227.45px}#cupping .feature-image>img{width:317px;height:auto}}

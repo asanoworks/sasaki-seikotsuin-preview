@@ -1,0 +1,79 @@
+.posture-concerns .container {
+  max-width:1120px
+}
+.posture-about .two-columns {
+  grid-template-columns:1fr 1.18fr;
+  align-items:start
+}
+.analysis-images>div {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  margin-top:16px;
+  align-items:start
+}
+.analysis-images>div img {
+  width:100%
+}
+.posture-about .copy .lead {
+  font-size:20px;
+  font-weight:500;
+  line-height:1.6
+}
+.page-posture .feature-cards .round-icon {
+  width:76px;
+  height:76px
+}
+.page-posture .feature-cards .round-icon img {
+  width:32px;
+  height:32px
+}
+.page-posture .feature-cards {
+  gap:24px
+}
+.page-posture .price-table {
+  margin-top:48px
+}
+.page-posture .faq-section {
+  padding-bottom:130px
+}
+@media(max-width:767px) {
+  .page-posture .page-hero__image {
+    left:min(calc(100% + 8px),calc(50% + 50vw - 88px));
+    width:84px;
+    height:auto
+  }
+  .posture-about .two-columns {
+    grid-template-columns:1fr;
+    gap:48px
+  }
+  .posture-about .copy .lead {
+    font-size:15px;
+    font-weight:400;
+    line-height:1.9
+  }
+  .analysis-images>div {
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-top:16px
+  }
+  .analysis-images img {
+    width:100%
+  }
+  .page-posture .feature-cards {
+    gap:24px
+  }
+  .page-posture .feature-cards .round-icon {
+    width:64px;
+    height:64px
+  }
+  .page-posture .price-table {
+    margin-top:0
+  }
+  .posture-flow .section-lead {
+    font-size:16px
+  }
+  .page-posture .faq-section {
+    padding-bottom:110px
+  }
+}

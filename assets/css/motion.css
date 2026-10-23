@@ -1,0 +1,86 @@
+@keyframes hero-in {
+  from {
+    opacity:0;
+    transform:translateY(18px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+@keyframes leaf-sway {
+  0%,100% {
+    rotate:-6deg
+  }
+  50% {
+    rotate:6deg
+  }
+}
+@keyframes menu-float {
+  0%,100% {
+    transform:translateY(-4px)
+  }
+  50% {
+    transform:translateY(4px)
+  }
+}
+.hero-intro {
+  animation:hero-in .9s ease-out both
+}
+.menu-ring {
+  animation:hero-in .9s ease-out .15s both
+}
+.leaf {
+  animation:leaf-sway 7s ease-in-out infinite
+}
+.leaf--two {
+  animation-delay:-2s
+}
+.leaf--three {
+  animation-delay:-4s
+}
+.menu-orbit__float {
+  animation:menu-float 4.2s ease-in-out infinite;
+  animation-delay:var(--delay,0s)
+}
+.menu-orbit:hover .menu-orbit__float {
+  animation-play-state:paused
+}
+.menu-orbit a {
+  transition:transform 300ms ease-out,color 300ms ease-out,background-color 300ms ease-out
+}
+.menu-orbit a:hover {
+  transform:scale(1.05);
+  color:var(--gold)
+}
+@media(max-width:767px) {
+  .menu-orbit__float {
+    animation:none
+  }
+}
+html[data-export] *,html[data-export] *::before,html[data-export] *::after {
+  animation:none!important;
+  transition:none!important;
+  scroll-behavior:auto!important
+}
+html[data-export] {
+  scroll-behavior:auto!important
+}
+html[data-export] [data-reveal] {
+  opacity:1!important;
+  transform:none!important
+}
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto!important
+  }
+  *,*::before,*::after {
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important
+  }
+  [data-reveal] {
+    opacity:1!important;
+    transform:none!important
+  }
+}

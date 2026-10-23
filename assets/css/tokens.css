@@ -1,0 +1,21 @@
+:root {
+  --text:#403a34;
+  --gold:#b89a5e;
+  --paper:#faf7f2;
+  --beige:#f5f1e8;
+  --reserve:#f4eee5;
+  --footer:#efe7d9;
+  --line:#e5d9c7;
+  --green:#8ca587;
+  --content:1120px;
+  --section:112px;
+  --radius:12px;
+  --header-height:120px;
+  color-scheme:light
+}
+@media(max-width:767px) {
+  :root {
+    --section:64px;
+    --header-height:73px
+  }
+}

@@ -1,0 +1,1218 @@
+.site-header {
+  height:120px;
+  background:rgba(250,247,242,.8);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  border-bottom:1px solid transparent;
+  transition:height 300ms ease-out,background 300ms ease-out,box-shadow 300ms ease-out
+}
+.header-container {
+  max-width:1280px;
+  width:calc(100% - 80px);
+  height:100%;
+  margin:auto;
+  display:flex;
+  gap:40px;
+  align-items:center;
+  justify-content:space-between
+}
+.brand {
+  display:block;
+  flex:0 0 268px
+}
+.brand img {
+  width:268px;
+  height:111.67px;
+  transition:height 300ms ease-out,width 300ms ease-out
+}
+.desktop-nav {
+  display:flex;
+  align-items:center;
+  gap:32px;
+  white-space:nowrap;
+  font-size:15px;
+  font-weight:500
+}
+.desktop-nav a,.nav-toggle {
+  font-size:15px;
+  line-height:24px;
+  display:flex;
+  align-items:center;
+  min-height:44px;
+  padding:0
+}
+.desktop-nav a:hover,.nav-toggle:hover {
+  color:var(--gold)
+}
+.chevron {
+  width:7px;
+  height:7px;
+  border-right:2px solid;
+  border-bottom:2px solid;
+  transform:rotate(45deg);
+  margin-left:10px;
+  margin-top:-4px
+}
+.dropdown-parent {
+  position:relative
+}
+.desktop-dropdown {
+  position:absolute;
+  top:72px;
+  left:0;
+  width:260px;
+  padding:8px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:12px;
+  box-shadow:0 10px 24px #403a3412
+}
+.desktop-dropdown a {
+  padding:12px 16px;
+  min-height:48px
+}
+.desktop-dropdown a:hover {
+  background:var(--beige);
+  border-radius:6px
+}
+.header-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0
+}
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:52px;
+  width:280px;
+  max-width:100%;
+  border:1px solid transparent;
+  border-radius:999px;
+  text-align:center;
+  font-size:15px;
+  font-weight:500;
+  line-height:24px;
+  padding:12px 20px;
+  transition:transform 300ms ease-out,color 300ms ease-out,background-color 300ms ease-out,border-color 300ms ease-out
+}
+.button .icon {
+  width:17px;
+  height:18px
+}
+.button--gold {
+  background:var(--gold);
+  color:white
+}
+.button--outline {
+  border-color:var(--gold);
+  background:var(--paper)
+}
+.button--line {
+  border-color:var(--green);
+  background:var(--paper);
+  color:var(--text)
+}
+.button--dark {
+  background:var(--text);
+  color:white
+}
+.header-actions .button {
+  height:44px;
+  min-height:44px;
+  padding:8px 14px;
+  font-size:13px;
+  gap:6px;
+  width:132px
+}
+.header-actions .button--line {
+  width:160px
+}
+.header-actions .button .icon {
+  width:14px;
+  height:14px
+}
+.header-actions .unconfigured-note {
+  font-size:9px;
+  line-height:12px;
+  position:absolute;
+  top:45px;
+  left:0;
+  width:100%
+}
+.unavailable-wrap {
+  display:inline-flex;
+  position:relative;
+  flex-direction:column;
+  align-items:center;
+  max-width:100%
+}
+.unconfigured-note {
+  display:block;
+  font-size:10px;
+  line-height:1.5;
+  color:#766846;
+  text-align:center;
+  margin-top:3px
+}
+.is-unavailable {
+  cursor:not-allowed
+}
+.site-header.is-compact {
+  height:72px;
+  background:rgba(250,247,242,.95);
+  box-shadow:0 2px 12px #403a3410;
+  border-bottom-color:var(--line)
+}
+.site-header.is-compact .brand img {
+  height:64px;
+  width:154px
+}
+.site-header.is-compact .desktop-dropdown {
+  top:56px
+}
+.menu-toggle {
+  display:none
+}
+.mobile-menu,.menu-overlay {
+  display:none
+}
+.round-icon {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  width:56px;
+  height:56px;
+  background:#f5e8c9;
+  flex-shrink:0
+}
+.round-icon .icon {
+  width:28px;
+  height:28px
+}
+.decorated {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden
+}
+.decorations {
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  overflow:hidden;
+  color:#8ca58720
+}
+.leaf {
+  position:absolute;
+  transform-origin:20% 85%;
+  width:140px;
+  opacity:.65
+}
+.leaf--one {
+  top:30px;
+  left:-60px;
+  transform:rotate(-10deg);
+  width:170px
+}
+.leaf--two {
+  top:100px;
+  right:20px;
+  width:130px
+}
+.leaf--three {
+  bottom:20px;
+  right:-30px;
+  width:200px
+}
+.sprout {
+  position:absolute;
+  bottom:30px;
+  left:24%;
+  width:110px;
+  height:130px;
+  transform:rotate(-7deg);
+  opacity:.65
+}
+.page-hero {
+  padding:60px 0 100px;
+  min-height:350px;
+  text-align:center
+}
+.page-hero__title {
+  position:relative;
+  width:max-content;
+  max-width:100%;
+  margin:0 auto 28px
+}
+.page-hero__title .eyebrow {
+  margin-bottom:24px
+}
+.page-hero__image {
+  position:absolute;
+  width:210px;
+  height:200px;
+  left:calc(100% + 120px);
+  top:0;
+  max-width:none
+}
+.page-hero__lead {
+  font-size:20px;
+  margin:auto;
+  max-width:1000px
+}
+.hero-notice {
+  margin:32px auto 0;
+  padding:12px 28px;
+  width:max-content;
+  max-width:100%;
+  border:1px solid #ead8ad;
+  background:#fcf7e9;
+  border-radius:99px;
+  color:var(--gold)
+}
+.reservation {
+  background:var(--reserve);
+  padding:112px 0;
+  min-height:884px
+}
+.reservation .container {
+  position:relative
+}
+.reservation-mascot {
+  position:absolute;
+  top:0;
+  right:0;
+  width:190px;
+  height:190px
+}
+.reservation-intro {
+  text-align:center;
+  margin:52px 0 80px
+}
+.reservation-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px
+}
+.reservation-card {
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--paper);
+  padding:28px 24px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:305px
+}
+.reservation-card h3 {
+  font-size:20px;
+  font-weight:500;
+  margin:16px 0
+}
+.reservation-card p {
+  font-size:16px;
+  line-height:1.9;
+  margin:0 0 16px;
+  min-height:60px
+}
+.reservation-card .button {
+  width:280px
+}
+.reservation-card--web {
+  border-color:#e3cc98
+}
+.reservation-card--line {
+  border-color:#c3d5bd
+}
+.reservation-card--web .round-icon {
+  background:var(--gold)
+}
+.reservation-card--line .round-icon {
+  background:var(--green)
+}
+.reservation-card--phone .round-icon {
+  background:var(--text)
+}
+.reservation-card .round-icon img {
+  filter:brightness(0) invert(1)
+}
+.reservation-card .unavailable-wrap {
+  width:100%
+}
+.reservation-note {
+  text-align:center;
+  font-size:13px;
+  margin-top:64px
+}
+.site-footer {
+  background:var(--footer);
+  padding:64px 0 32px;
+  min-height:510px
+}
+.footer-grid {
+  display:grid;
+  grid-template-columns:1.3fr 1fr 1fr;
+  gap:40px
+}
+.footer-logo {
+  width:230px;
+  height:96px;
+  margin-bottom:24px
+}
+.footer-contact {
+  font-size:15px
+}
+.footer-contact address p {
+  margin-bottom:16px
+}
+.footer-nav {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px
+}
+.footer-nav p {
+  font-size:14px;
+  margin:0
+}
+.footer-hours p {
+  margin-bottom:20px
+}
+.copyright {
+  text-align:center;
+  border-top:1px solid var(--line);
+  padding-top:24px;
+  margin-top:40px;
+  font-size:13px
+}
+.faq-section {
+  padding:112px 0;
+  background:var(--beige)
+}
+.faq-layout {
+  position:relative
+}
+.faq-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px 32px
+}
+.faq-item {
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+  align-self:start
+}
+.faq-item summary {
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:24px 28px;
+  list-style:none;
+  font-size:15px;
+  line-height:1.8;
+  min-height:80px
+}
+.faq-item summary::-webkit-details-marker {
+  display:none
+}
+.question-label {
+  color:var(--gold);
+  font-weight:500;
+  flex-shrink:0
+}
+.faq-mark {
+  position:relative;
+  display:block;
+  width:28px;
+  height:28px;
+  flex:0 0 28px;
+  border:1px solid #dec694;
+  border-radius:50%;
+  margin-left:auto
+}
+.faq-mark::before,.faq-mark::after {
+  content:'';
+  position:absolute;
+  background:var(--gold);
+  width:10px;
+  height:1px;
+  top:13px;
+  left:8px
+}
+.faq-mark::after {
+  transform:rotate(90deg)
+}
+.faq-item[open] .faq-mark::after {
+  display:none
+}
+.faq-answer {
+  display:flex;
+  gap:12px;
+  padding:0 28px 24px;
+  line-height:1.9;
+  font-size:15px
+}
+.answer-label {
+  flex:0 0 20px;
+  color:#928e86
+}
+.faq-answer p {
+  margin:0
+}
+.faq-mascot {
+  position:absolute;
+  left:-115px;
+  bottom:-70px;
+  width:120px;
+  height:120px
+}
+.page-top .faq-grid,.page-treatment .faq-grid {
+  grid-template-columns:1fr;
+  max-width:800px;
+  margin:auto;
+  gap:16px
+}
+.page-top .faq-mascot {
+  width:181px;
+  height:181px;
+  left:-30px;
+  bottom:-65px
+}
+.page-treatment .faq-mascot {
+  width:173px;
+  height:173px;
+  left:-15px;
+  bottom:-70px
+}
+.page-top .faq-section {
+  padding-bottom:128px
+}
+.flow-grid {
+  display:grid;
+  grid-template-columns:repeat(var(--steps),minmax(0,1fr));
+  gap:24px
+}
+.flow-grid li {
+  position:relative;
+  padding-top:0
+}
+.flow-grid li::before {
+  position:absolute;
+  content:'';
+  left:0;
+  right:-24px;
+  height:1px;
+  background:var(--line);
+  top:32px;
+  z-index:-1
+}
+.step-number {
+  display:flex;
+  border:1px solid #d9bd7d;
+  background:var(--paper);
+  border-radius:50%;
+  width:64px;
+  height:64px;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:500;
+  margin-bottom:20px
+}
+.flow-grid .eyebrow {
+  justify-content:flex-start;
+  font-size:12px;
+  margin-bottom:12px
+}
+.flow-grid h3 {
+  font-size:20px;
+  font-weight:500;
+  min-height:60px
+}
+.flow-image {
+  width:180px;
+  height:160px;
+  object-fit:contain;
+  margin:24px auto 28px
+}
+.flow-grid li>p:last-child {
+  font-size:16px;
+  line-height:1.9
+}
+.price-table {
+  max-width:950px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--paper);
+  overflow:hidden;
+  margin:auto
+}
+.price-cells {
+  display:flex
+}
+.price-cell {
+  flex:1;
+  text-align:center;
+  padding:32px 20px;
+  border-right:1px solid var(--line);
+  min-width:0
+}
+.price-cell:last-child {
+  border:0
+}
+.price-cell p {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin:0 0 24px;
+  font-size:16px
+}
+.price-cell .icon {
+  width:16px;
+  height:16px
+}
+.price-cell strong {
+  display:block;
+  font-size:32px;
+  line-height:1.5;
+  margin-bottom:8px
+}
+.price-cell small {
+  display:block
+}
+.price-note {
+  padding:20px 40px;
+  font-size:13px;
+  background:var(--beige);
+  text-align:center
+}
+.concern-list {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px
+}
+.concern-item {
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding:28px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:16px;
+  font-size:20px;
+  font-weight:500;
+  line-height:1.6
+}
+.concern-item .round-icon {
+  background:#f4ead8;
+  width:72px;
+  height:72px
+}
+.concern-outro {
+  text-align:center;
+  font-size:20px;
+  margin:80px auto 0
+}
+.feature-cards .round-icon {
+  margin-bottom:24px
+}
+.feature-cards h3 {
+  font-size:20px;
+  font-weight:500;
+  margin-bottom:16px
+}
+.feature-cards p {
+  font-size:16px
+}
+.feature-cards {
+  margin-top:80px
+}
+.footer-contact address p {
+  display:flex;
+  gap:10px;
+  align-items:flex-start
+}
+.footer-contact address .icon {
+  width:15px;
+  height:20px;
+  margin-top:4px;
+  color:var(--gold)
+}
+.page-hydrogen .faq-mascot {
+  display:none
+}
+@media(hover:hover) {
+  a.button:hover {
+    transform:scale(1.05);
+    background:#a48a52;
+    border-color:#a48a52;
+    color:#fff
+  }
+  .button--line:hover {
+    background:var(--green)!important
+  }
+  .button--outline:hover {
+    background:var(--beige)!important;
+    color:var(--text)!important
+  }
+  .footer-nav a:hover {
+    text-decoration:underline
+  }
+}
+@media(max-width:1320px) and (min-width:1101px) {
+  .header-container {
+    gap:22px
+  }
+  .desktop-nav {
+    gap:18px
+  }
+  .brand {
+    flex-basis:220px
+  }
+  .brand img {
+    width:220px
+  }
+  .header-actions .button--line {
+    width:140px
+  }
+  .header-actions .button {
+    width:120px
+  }
+}
+@media(max-width:1100px) and (min-width:768px) {
+  .header-container {
+    width:calc(100% - 40px);
+    gap:16px;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-content:center
+  }
+  .brand {
+    flex-basis:170px
+  }
+  .brand img {
+    width:170px;
+    height:70px
+  }
+  .desktop-nav {
+    order:3;
+    width:100%;
+    justify-content:center;
+    gap:24px;
+    height:36px
+  }
+  .desktop-nav a,.nav-toggle {
+    min-height:36px;
+    font-size:13px
+  }
+  .header-actions .unconfigured-note {
+    top:36px
+  }
+  .header-actions .button {
+    height:36px;
+    min-height:36px
+  }
+  .site-header.is-compact .desktop-nav {
+    height:24px
+  }
+  .site-header.is-compact .brand img {
+    height:40px;
+    width:100px
+  }
+  .site-header.is-compact .header-actions .button {
+    height:28px;
+    min-height:28px;
+    padding:0 10px
+  }
+  .site-header.is-compact .header-actions .unconfigured-note {
+    display:none
+  }
+  .desktop-dropdown {
+    top:36px
+  }
+  .site-header.is-compact .desktop-dropdown {
+    top:30px
+  }
+  .faq-mascot {
+    left:-30px;
+    bottom:-80px;
+    width:80px!important;
+    height:80px!important
+  }
+  .reservation-mascot {
+    width:130px;
+    height:130px
+  }
+  .reservation-card {
+    padding:24px 16px
+  }
+  .reservation-card h3 {
+    font-size:18px
+  }
+  .reservation-card p {
+    font-size:14px
+  }
+  .reservation-card .button {
+    font-size:13px;
+    padding:10px
+  }
+  .page-hero__image {
+    left:calc(100% + 35px);
+    width:160px
+  }
+}
+@media(max-width:767px) {
+  .site-header,.site-header.is-compact {
+    height:73px
+  }
+  .header-container {
+    width:calc(100% - 40px);
+    gap:16px
+  }
+  .brand {
+    flex-basis:153.6px
+  }
+  .brand img,.site-header.is-compact .brand img {
+    height:64px;
+    width:153.6px
+  }
+  .desktop-nav,.header-actions {
+    display:none
+  }
+  .menu-toggle {
+    display:flex;
+    width:44px;
+    height:44px;
+    flex-direction:column;
+    gap:5px;
+    align-items:center;
+    justify-content:center;
+    padding:10px
+  }
+  .menu-toggle span {
+    height:2px;
+    background:var(--text);
+    width:20px
+  }
+  .mobile-menu {
+    display:block;
+    position:fixed;
+    inset:0 0 auto;
+    max-height:100dvh;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    background:var(--paper);
+    z-index:201;
+    padding:12px 20px 32px;
+    clip-path:inset(0 0 100% 0);
+    transition:clip-path 460ms cubic-bezier(.6,0,.9,1)
+  }
+  .mobile-menu.is-open {
+    clip-path:inset(0 0 0 0);
+    transition:clip-path 680ms cubic-bezier(.16,1,.3,1)
+  }
+  .mobile-menu__header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:24px
+  }
+  .mobile-menu__header img {
+    width:192px;
+    height:80px
+  }
+  .menu-close {
+    font-size:30px;
+    line-height:1;
+    width:44px;
+    height:44px
+  }
+  .submenu-toggle,.mobile-nav-link {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:54px;
+    width:100%;
+    border-bottom:1px solid var(--line);
+    padding:12px 0;
+    text-align:left;
+    font-size:16px
+  }
+  .submenu-toggle[aria-expanded=true] span {
+    font-size:0
+  }
+  .submenu-toggle[aria-expanded=true] span::after {
+    content:'−';
+    font-size:16px
+  }
+  .mobile-submenu {
+    background:#f1ece3;
+    padding:12px 16px;
+    border-radius:8px;
+    margin-top:12px
+  }
+  .mobile-submenu a {
+    display:block;
+    padding:10px 0;
+    font-size:15px
+  }
+  .mobile-menu__label {
+    margin:24px 0 12px;
+    font-size:16px
+  }
+  .mobile-menu__actions {
+    display:grid;
+    gap:12px
+  }
+  .mobile-menu__actions .button,.mobile-menu__actions .unavailable-wrap {
+    width:100%
+  }
+  .menu-overlay {
+    display:block;
+    position:fixed;
+    inset:0;
+    background:rgb(80 80 80 / 45%);
+    opacity:0;
+    z-index:200;
+    transition:opacity 450ms ease
+  }
+  .menu-overlay.is-open {
+    opacity:1
+  }
+  .button {
+    width:335px;
+    max-width:100%;
+    font-size:15px
+  }
+  .unavailable-wrap {
+    width:100%
+  }
+  .unconfigured-note {
+    font-size:10px
+  }
+  .page-hero {
+    min-height:265px;
+    padding:40px 0 64px
+  }
+  .page-hero__title {
+    margin:0 auto 30px
+  }
+  .page-hero__title .eyebrow {
+    font-size:12px;
+    white-space:nowrap;
+    letter-spacing:.25em
+  }
+  .page-hero__image {
+    left:calc(100% + 8px);
+    top:60px;
+    width:70px;
+    height:70px
+  }
+  .page-hero__lead {
+    font-size:15px
+  }
+  .page-hero .leaf--one {
+    left:-30px;
+    top:5px;
+    width:120px
+  }
+  .page-hero .leaf--two {
+    right:-10px;
+    top:60px;
+    width:110px
+  }
+  .page-hero .leaf--three {
+    display:none
+  }
+  .page-hero .sprout {
+    width:70px;
+    height:80px;
+    bottom:20px;
+    left:27%
+  }
+  .hero-notice {
+    font-size:13px;
+    padding:14px 20px;
+    border-radius:12px;
+    margin-top:24px
+  }
+  .reservation {
+    min-height:1479px;
+    padding:64px 0
+  }
+  .reservation .section-heading {
+    padding-right:0;
+    margin-bottom:36px
+  }
+  .reservation h2 {
+    font-size:24px
+  }
+  .reservation-mascot {
+    width:82px;
+    height:82px;
+    right:0;
+    top:75px
+  }
+  .reservation-intro {
+    text-align:left;
+    max-width:240px;
+    margin:28px 0 48px;
+    font-size:14px;
+    line-height:1.9
+  }
+  .reservation-grid {
+    grid-template-columns:1fr;
+    gap:20px
+  }
+  .reservation-card {
+    padding:28px 24px;
+    min-height:305px
+  }
+  .reservation-card h3 {
+    font-size:20px
+  }
+  .reservation-card p {
+    font-size:15px;
+    min-height:60px
+  }
+  .reservation-card .button {
+    width:100%
+  }
+  .reservation-card .unconfigured-note {
+    font-size:10px
+  }
+  .reservation-note {
+    margin-top:40px;
+    text-align:left;
+    font-size:12px
+  }
+  .site-footer {
+    padding:48px 0 32px;
+    min-height:977px
+  }
+  .footer-grid {
+    grid-template-columns:1fr;
+    gap:32px
+  }
+  .footer-logo {
+    width:192px;
+    height:80px
+  }
+  .footer-contact {
+    font-size:14px
+  }
+  .footer-nav {
+    gap:10px
+  }
+  .footer-nav a {
+    font-size:14px
+  }
+  .footer-hours {
+    font-size:14px
+  }
+  .footer-hours p {
+    margin-bottom:16px
+  }
+  .copyright {
+    margin-top:32px;
+    padding-top:24px;
+    font-size:12px
+  }
+  .leaf--one {
+    width:130px;
+    left:-65px;
+    top:30px
+  }
+  .leaf--two {
+    width:100px;
+    right:-20px;
+    top:100px
+  }
+  .leaf--three {
+    width:140px;
+    right:-45px;
+    bottom:25px
+  }
+  .sprout {
+    width:80px;
+    height:90px;
+    left:22%;
+    bottom:20px
+  }
+  .faq-section {
+    padding:64px 0 100px
+  }
+  .faq-grid {
+    grid-template-columns:1fr;
+    gap:16px
+  }
+  .faq-item summary {
+    font-size:15px;
+    gap:12px;
+    padding:20px;
+    min-height:76px
+  }
+  .faq-answer {
+    font-size:14px;
+    padding:0 20px 24px
+  }
+  .faq-mark {
+    width:26px;
+    height:26px;
+    flex-basis:26px
+  }
+  .faq-mark::before,.faq-mark::after {
+    top:12px;
+    left:7px
+  }
+  .faq-mascot,.page-top .faq-mascot,.page-treatment .faq-mascot {
+    width:79px;
+    height:79px;
+    left:auto;
+    right:0;
+    bottom:-75px
+  }
+  .page-top .faq-mascot {
+    width:84px;
+    height:84px
+  }
+  .page-hydrogen .faq-mascot {
+    width:62px;
+    height:62px;
+    bottom:-65px
+  }
+  .page-top .faq-section {
+    padding-bottom:130px
+  }
+  .flow-grid {
+    grid-template-columns:1fr;
+    gap:48px;
+    text-align:center
+  }
+  .step-number {
+    margin:0 auto 20px
+  }
+  .flow-grid li::before {
+    display:none
+  }
+  .flow-grid .eyebrow {
+    justify-content:center
+  }
+  .flow-grid h3 {
+    font-size:20px;
+    min-height:0
+  }
+  .flow-image {
+    width:280px;
+    height:220px;
+    margin:40px auto
+  }
+  .flow-grid li>p:last-child {
+    font-size:15px;
+    text-align:center
+  }
+  .price-cells {
+    flex-direction:column
+  }
+  .price-cell {
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding:28px 20px
+  }
+  .price-cell p {
+    font-size:15px;
+    margin-bottom:16px
+  }
+  .price-cell strong {
+    font-size:28px
+  }
+  .price-note {
+    font-size:12px;
+    text-align:left;
+    padding:20px
+  }
+  .concern-list {
+    grid-template-columns:1fr;
+    gap:16px
+  }
+  .concern-item {
+    padding:22px 20px;
+    gap:16px;
+    font-size:16px;
+    min-height:98px
+  }
+  .concern-item .round-icon {
+    width:56px;
+    height:56px
+  }
+  .concern-outro {
+    font-size:16px;
+    margin-top:48px
+  }
+  .feature-cards {
+    margin-top:48px
+  }
+  .feature-cards h3 {
+    font-size:18px
+  }
+  .feature-cards p {
+    font-size:15px
+  }
+}
+@media(max-width:767px) {
+  .reservation-mascot {
+    position:static;
+    display:block;
+    margin:0 auto 16px;
+    width:82px;
+    height:82px
+  }
+  .reservation-intro {
+    text-align:center;
+    max-width:none;
+    margin:0 auto 48px
+  }
+  .reservation .section-heading {
+    margin-bottom:28px
+  }
+  .reservation .eyebrow {
+    margin-bottom:16px
+  }
+  .reservation .heading-rule {
+    margin-top:20px
+  }
+  .reservation-card {
+    padding:24px;
+    min-height:297px
+  }
+  .reservation-grid {
+    gap:24px
+  }
+  .faq-mascot,.page-top .faq-mascot,.page-treatment .faq-mascot,.page-hydrogen .faq-mascot {
+    left:50%;
+    right:auto;
+    transform:translateX(-50%)
+  }
+  .page-hydrogen .faq-mascot {
+    display:block
+  }
+  .footer-contact address p {
+    gap:10px
+  }
+  .footer-contact address .icon {
+    width:14px;
+    height:18px
+  }
+}
