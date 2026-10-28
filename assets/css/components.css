@@ -128,7 +128,9 @@
   padding:8px 14px;
   font-size:13px;
   gap:6px;
-  width:132px
+  width:auto;
+  flex-shrink:0;
+  white-space:nowrap
 }
 .header-actions .button--line {
   width:160px
@@ -673,10 +675,11 @@
 }
 @media(max-width:1320px) and (min-width:1101px) {
   .header-container {
-    gap:22px
+    width:calc(100% - 40px);
+    gap:16px
   }
   .desktop-nav {
-    gap:18px
+    gap:12px
   }
   .brand {
     flex-basis:220px
@@ -688,7 +691,7 @@
     width:140px
   }
   .header-actions .button {
-    width:120px
+    width:auto
   }
 }
 @media(max-width:1100px) and (min-width:768px) {
