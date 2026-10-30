@@ -996,3 +996,10 @@
 .page-top .faq-item summary:focus-visible {
   outline-offset:-3px;
 }
+
+/* Adjust only the seitai artwork within the existing image area. */
+.other-menu .other-card:first-child .other-card__image img { transform:scale(1.24) }
+
+@media(min-width:768px) and (max-width:900px) {
+  .other-menu .other-card:first-child .other-card__image img { transform:scale(1.12) }
+}

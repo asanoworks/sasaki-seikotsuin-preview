@@ -228,3 +228,18 @@
     padding-bottom:105px
   }
 }
+
+@media(min-width:768px) {
+  .hydrogen-equipment .device-photo {
+    aspect-ratio:auto;
+    align-self:stretch;
+    min-height:0;
+    position:relative
+  }
+  .hydrogen-equipment .device-photo img {
+    position:absolute;
+    inset:0;
+    object-fit:cover;
+    object-position:70% center
+  }
+}
