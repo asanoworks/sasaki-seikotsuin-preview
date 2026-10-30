@@ -102,7 +102,7 @@ export function initNavigation() {
       list.hidden = !expanded;
     });
   });
-  matchMedia('(min-width: 768px)').addEventListener('change', event => {
+  matchMedia('(min-width: 1101px)').addEventListener('change', event => {
     if (event.matches && open) setMenu(false, false);
     if (!event.matches) setDropdown(false);
   });

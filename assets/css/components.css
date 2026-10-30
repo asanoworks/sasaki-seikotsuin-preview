@@ -349,6 +349,19 @@
 .reservation-card .unavailable-wrap {
   width:100%
 }
+.text-phrase {
+  display:inline-block
+}
+.copyright .text-phrase {
+  white-space:nowrap
+}
+.reservation-card h3,.reservation-card .button {
+  word-break:keep-all;
+  overflow-wrap:normal
+}
+.reservation-card>.button,.reservation-card>.unavailable-wrap {
+  margin-top:auto
+}
 .reservation-note {
   text-align:center;
   font-size:13px;
@@ -776,7 +789,13 @@
     width:160px
   }
 }
-@media(max-width:767px) {
+@media(max-width:1100px) {
+  :root {
+    --header-height:73px
+  }
+  main {
+    padding-top:73px
+  }
   .site-header,.site-header.is-compact {
     height:73px
   }
@@ -894,6 +913,8 @@
   .menu-overlay.is-open {
     opacity:1
   }
+}
+@media(max-width:767px) {
   .button {
     width:335px;
     max-width:100%;

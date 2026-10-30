@@ -55,7 +55,8 @@
   gap:56px
 }
 .device-photo {
-  height:399.5px;
+  aspect-ratio:532/400;
+  align-self:center;
   border-radius:12px;
   overflow:hidden;
   background:var(--paper)
@@ -63,8 +64,8 @@
 .device-photo img {
   width:100%;
   height:100%;
-  object-fit:cover;
-  object-position:left center
+  object-fit:contain;
+  object-position:center
 }
 .device-specs {
   margin:0;
@@ -129,7 +130,7 @@
     font-size:16px;
     line-height:1.7
   }
-  .device-photo,.device-specs {
+  .device-specs {
     height:350px
   }
   .recommend-character {
@@ -190,9 +191,9 @@
     gap:24px
   }
   .device-photo {
-    height:250px;
-    margin-inline:-20px;
-    border-radius:0
+    width:100%;
+    max-width:532px;
+    margin-inline:auto
   }
   .device-specs {
     height:auto;

@@ -149,6 +149,13 @@
 .treatment-concerns {
   padding-top:0
 }
+.treatment-concerns .section-heading {
+  margin-bottom:28px
+}
+.treatment-concerns__lead {
+  margin:0 auto 48px;
+  text-align:center
+}
 .treatment-concerns .concern-list {
   grid-template-columns:repeat(4,minmax(0,1fr));
   gap:16px
@@ -284,6 +291,9 @@
   .treatment-description {
     font-size:15px;
     margin:20px auto 28px
+  }
+  .treatment-description__ending {
+    display:block
   }
   .treatment-tabs {
     gap:8px;

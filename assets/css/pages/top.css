@@ -184,13 +184,13 @@
   padding:96px 0
 }
 .experience-panel {
-  padding:56px;
+  padding:40px;
   background:linear-gradient(135deg,#fcf7e7,#ede8db);
   border:1px solid #e8cf8e;
   border-radius:24px;
   display:grid;
-  grid-template-columns:1.05fr .95fr;
-  gap:40px
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:32px
 }
 .experience-copy h2 {
   white-space:pre-line;
@@ -247,27 +247,30 @@
 .experience-visual {
   position:relative;
   border-radius:16px;
-  border:1px solid var(--line);
-  background:#f7f2e6;
+  border:1px solid transparent;
+  background:transparent;
+  box-shadow:none;
   min-height:510px;
   overflow:hidden
 }
 .experience-photo {
   position:absolute;
-  width:72%;
+  width:calc(72% - 32px);
   border-radius:16px;
-  border:1px solid var(--line);
-  box-shadow:0 4px 8px #403a3412
+  mask-size:100% 100%;
+  mask-repeat:no-repeat
 }
 .experience-photo--one {
-  top:15px;
-  left:15px;
-  transform:rotate(-3deg)
+  top:18px;
+  left:18px;
+  transform:rotate(-3deg);
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 593 401' preserveAspectRatio='none'%3E%3Cpath d='M22 14L571 1Q593 0 593 22L593 374Q593 396 571 397L32 401Q10 401 9 379L1 36Q0 15 22 14Z'/%3E%3C/svg%3E")
 }
 .experience-photo--two {
-  top:128px;
-  left:130px;
-  transform:rotate(10deg)
+  top:112px;
+  left:min(120px,22%);
+  transform:rotate(10deg);
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 614 461' preserveAspectRatio='none'%3E%3Cpath d='M121.010266 9.789099L568.329532 83.755277C598.018568 88.664488 618.110353 116.706951 613.211383 146.397678L567.201235 425.247062C563.600658 447.068741 542.974714 461.826836 521.158904 458.190867L57.068268 380.842428C33.090686 376.846164 16.896638 354.163623 20.903776 330.187855L68.135182 47.589908C72.317996 22.56303 95.976186 5.649606 121.010266 9.789099Z'/%3E%3C/svg%3E")
 }
 .experience-bottom {
   position:absolute;
@@ -286,6 +289,26 @@
   font-size:14px;
   white-space:pre-line;
   line-height:1.8
+}
+.experience-bottom .speech {
+  padding-inline:13px;
+  position:relative
+}
+.experience-bottom .speech::after {
+  content:'';
+  position:absolute;
+  right:-7px;
+  bottom:18px;
+  width:12px;
+  height:12px;
+  background:var(--paper);
+  border-top:1px solid #ddc17e;
+  border-right:1px solid #ddc17e;
+  transform:skewY(20deg) rotate(45deg);
+  pointer-events:none
+}
+.experience .speech-ending,.experience .speech-word {
+  white-space:nowrap
 }
 .experience-character {
   width:175px;
@@ -373,7 +396,7 @@
 }
 .top-flow .flow-grid h3 {
   min-height:0;
-  max-width:calc(100% - 75px);
+  max-width:calc(100% - 100px);
   margin:12px 0
 }
 .top-flow .flow-grid .flow-image {
@@ -543,7 +566,7 @@
 }
 @media(max-width:1200px) and (min-width:768px) {
   .hero-container {
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
     column-gap:20px;
     align-items:start
   }
@@ -556,16 +579,20 @@
   .hero-visual {
     transform:scale(.78);
     transform-origin:top left;
-    width:350px;
-    height:420px
+    width:452px;
+    height:520px
   }
   .hero-cta .actions {
     flex-direction:column;
     gap:12px
   }
   .experience-panel {
-    padding:40px;
+    padding:32px;
+    grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);
     gap:24px
+  }
+  .experience-photo {
+    width:calc(72% - 14px)
   }
   .experience-copy h2 {
     font-size:25px
@@ -575,7 +602,7 @@
     height:110px
   }
   .experience-photo--two {
-    left:70px
+    left:min(70px,22%)
   }
   .speech {
     font-size:12px;
@@ -782,7 +809,8 @@
   }
   .speech {
     font-size:12px;
-    padding:12px
+    padding:12px;
+    text-align:center
   }
   .other-menu .card-grid {
     gap:24px
@@ -932,3 +960,39 @@
 
 .top-concerns .title-icon{background:#dcefd7}
 @media(max-width:767px){.desktop-only{display:none}.mobile-only{display:inline}.experience-panel{display:flex;flex-direction:column;gap:0}.experience-copy{display:contents}.event-badge{align-self:flex-start}.event-date{align-self:flex-start}.experience-copy h2{align-self:flex-start;white-space:normal}.event-duration{align-self:flex-start}.event-facts{width:100%}.experience-visual{order:1;display:flex;flex-direction:column;gap:16px;padding:16px;min-height:0;width:100%;margin-bottom:28px}.experience-copy>.unavailable-wrap,.experience-copy>a.button{order:2;width:100%}.experience-photo{position:static;transform:none;width:100%;aspect-ratio:1.5;object-fit:cover}.experience-bottom{position:static;gap:12px;align-items:flex-end}.experience-bottom .speech{flex:1;white-space:normal;font-size:12px;padding:12px}.experience-bottom picture{flex:0 0 100px}.experience-bottom .experience-character{width:100px;height:100px}.top-flow .flow-grid{gap:44px}.top-flow .flow-grid li{display:block;position:relative;text-align:center}.top-flow .step-number{width:64px;height:64px;margin:0 auto 24px}.top-flow .flow-grid .eyebrow{justify-content:center;margin:0 0 8px}.top-flow .flow-grid h3{font-size:20px;margin:0 0 16px;max-width:none;min-height:0}.top-flow .flow-grid .flow-image{position:absolute;right:32px;left:auto;top:64px;width:90px;height:85px}.top-flow .flow-grid li:nth-child(even) .flow-image{right:auto;left:16px}.top-flow .flow-grid li>p:last-child{text-align:center;font-size:15px}.about .section-heading{text-align:center;margin-bottom:48px}.about .section-heading .eyebrow{justify-content:center}.about .section-heading .heading-rule{margin-left:auto}.about .copy{text-align:center}.about .copy>p:not(.lead){max-width:285px;margin:0 auto 32px;font-size:14px}.director::before{margin-inline:auto}.concerns-cta{padding-right:0}.concern-mascot{right:32px;top:-40px}.top-concerns .concern-outro h2{font-size:20px}.top-concerns .concern-outro>p{margin-top:24px;margin-bottom:48px}}
+
+@media(min-width:768px) and (max-width:1100px) {
+  .top-flow .flow-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px }
+}
+@media(min-width:768px) and (max-width:900px) {
+  .hero-visual { transform:scale(.62) }
+}
+@media(max-width:767px) {
+  .top-flow .flow-grid .flow-image {
+    position:static;
+    margin:16px auto 20px
+  }
+}
+
+@media(max-width:767px) {
+  .experience .experience-photo { aspect-ratio:auto; object-fit:contain }
+  .experience-bottom .speech::after { bottom:24px }
+}
+@media(min-width:768px) and (max-width:900px) {
+  .experience-bottom .speech::after { top:48px; bottom:auto }
+}
+@media(min-width:768px) {
+  .experience-bottom { justify-content:center; gap:16px }
+}
+.experience .experience-photo--two { translate:16px 8px }
+@media(min-width:768px) and (max-width:900px) {
+  .experience .experience-photo--two { translate:8px 8px }
+}
+@media(max-width:767px) {
+  .experience .experience-photo--two { translate:6px 6px }
+}
+
+/* TOP FAQ: keep the keyboard focus indicator inside the question. */
+.page-top .faq-item summary:focus-visible {
+  outline-offset:-3px;
+}

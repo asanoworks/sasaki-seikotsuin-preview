@@ -21,7 +21,7 @@
 }
 .welcome-image {
   position:absolute;
-  left:-80px;
+  left:max(-80px,calc((1120px - 100vw)/2 + 16px));
   bottom:-100px;
   width:229px;
   height:172px
@@ -256,4 +256,24 @@
   .before-note {
     font-size:13px
   }
+}
+
+/* Isolated welcome reassurance prototype; existing copy and illustration retained. */
+.welcome-copy .welcome-reassurance {
+  max-width:760px;
+  margin:24px auto 0;
+  font-size:inherit;
+  font-weight:400;
+  line-height:inherit;
+  color:inherit;
+}
+.welcome-copy .welcome-reassurance > span { display:block }
+.welcome-copy .welcome-reassurance-phrase { white-space:nowrap }
+@media(max-width:767px) {
+  .welcome-copy .welcome-reassurance { max-width:none }
+}
+
+/* Keep the existing mascot clear of the consent statement at intermediate widths. */
+@media(min-width:768px) and (max-width:1279px) {
+  .page-first .welcome-copy { padding-bottom:80px }
 }
