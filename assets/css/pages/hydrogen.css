@@ -243,3 +243,7 @@
     object-position:70% center
   }
 }
+
+@media(max-width:767px) {
+  .hydrogen-equipment .device-photo img { object-fit:cover }
+}
